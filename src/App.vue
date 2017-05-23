@@ -10,8 +10,8 @@
         <img v-show="onmouseover"  @click="onmouseover=false" class="closeicon" src="./assets/icon/close.png">
       </div>
       <ul class="content" >
-        <li class="mainnav" v-for="i in nav" @click="onmouseover=false">
-          <span :class="(i.isSub)?'sub_nav_title':null" @click="$router.push(i.link)">{{i.title}}</span>
+        <li class="mainnav" v-for="i in nav" @click="(i.isSub)?null:$router.push(i.link),onmouseover=false">
+          <span :class="(i.isSub)?'sub_nav_title':null">{{i.title}}</span>
           <ul :class="(i.isSub)?'sub_nav':null">
             <li v-for="s in i.sub" @click="$router.push(s.link)">
               {{s.title}}
@@ -65,7 +65,7 @@ export default {
         {
           title:'主页',
           isSub:false,
-          link:'/main'
+          link:'/'
         },
         {
           title:'School Day',
