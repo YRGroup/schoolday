@@ -22,6 +22,11 @@ export default new Router({
       component: schoolday
     },
     {
+      path: '/main',
+      name: 'schoolday',
+      component: schoolday
+    },
+    {
       path: '/s/:school',
       name: 'seven',
       component: seven

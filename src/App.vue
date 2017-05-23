@@ -65,7 +65,7 @@ export default {
         {
           title:'主页',
           isSub:false,
-          link:'/'
+          link:'/main'
         },
         {
           title:'School Day',

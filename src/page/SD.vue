@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <video class="myvideo" autoplay loop>
+    <video id="myvideo" autoplay loop>
       <source :src="currentdata.video" type="video/webm">
       <source :src="currentdata.video2" type="video/mp4">
     </video>
@@ -17,37 +17,28 @@
       </div>
       <div class="provider">
         <div class="item" 
-          @mouseover="showmap(1)">
+          @mouseover="map_index=1,showmap(1)">
           <img :src="$store.state.logo['郑州航空港区育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="showmap(2)">
+        <div class="item" @mouseover="map_index=2,showmap(2)">
           <img :src="$store.state.logo['郑州外国语女子中学']"></img>
         </div>
-        <div class="item" @mouseover="showmap(3)">
+        <div class="item" @mouseover="map_index=3,showmap(3)">
           <img :src="$store.state.logo['襄城县育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="showmap(4)">
+        <div class="item" @mouseover="map_index=4,showmap(4)">
           <img :src="$store.state.logo['郑州航空港区育人高级中学']"></img>
         </div>
       </div>
     </div>
 
     <span class="closemap" 
-      @click="showmap1='none',showmap2='none',showmap3='none',showmap4='none'" 
-      v-show="(showmap1=='block')|(showmap2=='block')|(showmap3=='block')|(showmap4=='block')">
+      @click="map_index=null" 
+      v-show="map_index!=null">
       <img src="../assets/icon/close2.png">
     </span>
 
-    <div id="map1" :style="{display:showmap1}">      
-    </div>
-
-    <div id="map2" :style="{display:showmap2}">
-    </div>
-
-    <div id="map3" :style="{display:showmap3}">
-    </div>
-
-    <div id="map4" :style="{display:showmap4}">
+    <div :id="'map'+i" v-show="map_index==i" v-for="i in 4"> 
     </div>
 
   </div>
@@ -59,7 +50,7 @@ export default {
   data () {
     return {
       currentdata:{},
-      showmap1:'none',showmap2:'none',showmap3:'none',showmap4:'none'
+      map_index:null
     }
   },
   methods:{
@@ -68,39 +59,15 @@ export default {
       if(thismap.childNodes.length == 0){
         window.location.reload()
       }
-      switch(val){
-        case 1:
-          this.showmap4='none'
-          this.showmap3='none'
-          this.showmap2='none'
-          this.showmap1='block'
-          break;
-        case 2:
-          this.showmap4='none'
-          this.showmap3='none'
-          this.showmap2='block'
-          this.showmap1='none'
-          break;
-        case 3:
-          this.showmap4='none'
-          this.showmap3='block'
-          this.showmap2='none'
-          this.showmap1='none'
-          break;
-        case 4:
-          this.showmap4='block'
-          this.showmap3='none'
-          this.showmap2='none'
-          this.showmap1='none'
-          break;
-      }
     },
     getsrc(){
       let name = this.$route.params.name.toString()
       this.currentdata = this.$store.state.schoolday.find(function(a){return a.id == name})
+      let myvideo = document.getElementById('myvideo')
+      myvideo.load()
     }
   },
-  created(){
+  mounted(){
     this.getsrc()
     if(window.innerWidth<900){
       this.$router.push('/m/sd/'+this.$route.params.name)
@@ -125,7 +92,7 @@ export default {
   background: url('../assets/pattern.png');
 }
 
-.myvideo {
+#myvideo {
   z-index: -1;
   position: fixed;
   top: 0;
@@ -217,7 +184,6 @@ export default {
   background:rgba(0, 0, 0, 0.4);
   z-index: 2300;
   border-radius: 10px;
-  display: none;
 }
 .closemap{
   position: absolute;

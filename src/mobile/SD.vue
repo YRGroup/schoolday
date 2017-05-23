@@ -21,23 +21,23 @@
 
       <div class="provider">
         <div class="item" 
-          @mouseover="map_index=1">
+          @mouseover="map_index=1,showmap(1)">
           <img :src="$store.state.logo['郑州航空港区育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="map_index=2">
+        <div class="item" @mouseover="map_index=2,showmap(2)">
           <img :src="$store.state.logo['郑州外国语女子中学']"></img>
         </div>
-        <div class="item" @mouseover="map_index=3">
+        <div class="item" @mouseover="map_index=3,showmap(3)">
           <img :src="$store.state.logo['襄城县育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="map_index=4">
+        <div class="item" @mouseover="map_index=4,showmap(4)">
           <img :src="$store.state.logo['郑州航空港区育人高级中学']"></img>
         </div>
       </div>
 
       <span class="closemap" 
-        @click="showmap1='none',showmap2='none',showmap3='none',showmap4='none'" 
-        v-show="(showmap1=='block')|(showmap2=='block')|(showmap3=='block')|(showmap4=='block')">
+        @click="map_index=null"
+        v-show="map_index!=null">
         <img src="../assets/icon/close2.png">
       </span>
 
@@ -57,8 +57,7 @@ export default {
   data () {
     return {
       currentdata:{},
-      map_index:null,
-      showmap1:'none',showmap2:'none',showmap3:'none',showmap4:'none'
+      map_index:null
     }
   },
   computed:{
@@ -70,14 +69,20 @@ export default {
       if(thismap.childNodes.length == 0){
         window.location.reload()
       }
+    },
+    getsrc(){
+      let name = this.$route.params.name
+      this.currentdata = this.$store.state.schoolday.find(function(val){return val.id == name})
     }
   },
   created(){
-    let name = this.$route.params.name
-    this.currentdata = this.$store.state.schoolday.find(function(val){return val.id == name})
+    this.getsrc()
     if(window.innerWidth>=900){
       this.$router.push('/sd/'+name)
     }
+  },
+  watch:{
+    "$route": "getsrc"
   }
 }
 
