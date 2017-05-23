@@ -8,8 +8,8 @@
         <span class="icontitle">{{currentdata.title}}</span>
       </div>
 
-      <p>{{currentdata.content}}</p>
-      <video class="myvideo" loop :poster="currentdata.img">
+      <p class="info">{{currentdata.content}}</p>
+      <video class="myvideo" loop autoplay :poster="currentdata.img">
           <source :src="currentdata.video" type="video/webm">
           <source :src="currentdata.video2" type="video/mp4">
       </video>
@@ -21,17 +21,17 @@
 
       <div class="provider">
         <div class="item" 
-          @mouseover="showmap(1)">
-          <img src="../assets/logo/育人男中.png"></img>
+          @mouseover="map_index=1">
+          <img :src="$store.state.logo['郑州航空港区育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="showmap(2)">
-          <img src="../assets/logo/爱因斯坦国际幼儿园.png"></img>
+        <div class="item" @mouseover="map_index=2">
+          <img :src="$store.state.logo['郑州外国语女子中学']"></img>
         </div>
-        <div class="item" @mouseover="showmap(3)">
-          <img src="../assets/logo/女中.png"></img>
+        <div class="item" @mouseover="map_index=3">
+          <img :src="$store.state.logo['襄城县育人国际学校']"></img>
         </div>
-        <div class="item" @mouseover="showmap(4)">
-          <img src="../assets/logo/襄城育人学校.png"></img>
+        <div class="item" @mouseover="map_index=4">
+          <img :src="$store.state.logo['郑州航空港区育人高级中学']"></img>
         </div>
       </div>
 
@@ -41,16 +41,7 @@
         <img src="../assets/icon/close2.png">
       </span>
 
-      <div id="map1" :style="{display:showmap1}">      
-      </div>
-
-      <div id="map2" :style="{display:showmap2}">
-      </div>
-
-      <div id="map3" :style="{display:showmap3}">
-      </div>
-
-      <div id="map4" :style="{display:showmap4}">
+      <div :id="'map'+i" v-show="map_index==i" v-for="i in 4">      
       </div>
 
     </div>
@@ -66,8 +57,12 @@ export default {
   data () {
     return {
       currentdata:{},
+      map_index:null,
       showmap1:'none',showmap2:'none',showmap3:'none',showmap4:'none'
     }
+  },
+  computed:{
+
   },
   methods:{
     showmap(val){
@@ -75,37 +70,11 @@ export default {
       if(thismap.childNodes.length == 0){
         window.location.reload()
       }
-      switch(val){
-        case 1:
-          this.showmap4='none'
-          this.showmap3='none'
-          this.showmap2='none'
-          this.showmap1='block'
-          break;
-        case 2:
-          this.showmap4='none'
-          this.showmap3='none'
-          this.showmap2='block'
-          this.showmap1='none'
-          break;
-        case 3:
-          this.showmap4='none'
-          this.showmap3='block'
-          this.showmap2='none'
-          this.showmap1='none'
-          break;
-        case 4:
-          this.showmap4='block'
-          this.showmap3='none'
-          this.showmap2='none'
-          this.showmap1='none'
-          break;
-      }
     }
   },
   created(){
-    let name = this.$route.params.name.toString()
-    this.currentdata = this.$store.state.schoolday.find(function(a){return a.title == name})
+    let name = this.$route.params.name
+    this.currentdata = this.$store.state.schoolday.find(function(val){return val.id == name})
     if(window.innerWidth>=900){
       this.$router.push('/sd/'+name)
     }
@@ -149,7 +118,7 @@ export default {
   .title {
     font-size: 40px;
     line-height: 60px;
-    margin: 1em 0;
+    margin-top: 1em;
     cursor: pointer;
     img {
       width: 1em;
@@ -160,9 +129,8 @@ export default {
       left: .2em;
     }
   }
-  pre {
-    max-height:10em;
-    overflow: auto;
+  .info {
+    text-indent: 2em;
   }
   .grade {
     &:before {
@@ -206,7 +174,7 @@ export default {
   background:rgba(0, 0, 0, 0.4);
   z-index: 2300;
   border-radius: 10px;
-  display: none;
+  // display: none;
 }
 .closemap{
   position: relative;

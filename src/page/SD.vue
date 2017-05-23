@@ -18,16 +18,16 @@
       <div class="provider">
         <div class="item" 
           @mouseover="showmap(1)">
-          <img src="../assets/logo/育人男中.png"></img>
+          <img :src="$store.state.logo['郑州航空港区育人国际学校']"></img>
         </div>
         <div class="item" @mouseover="showmap(2)">
-          <img src="../assets/logo/爱因斯坦国际幼儿园.png"></img>
+          <img :src="$store.state.logo['郑州外国语女子中学']"></img>
         </div>
         <div class="item" @mouseover="showmap(3)">
-          <img src="../assets/logo/女中.png"></img>
+          <img :src="$store.state.logo['襄城县育人国际学校']"></img>
         </div>
         <div class="item" @mouseover="showmap(4)">
-          <img src="../assets/logo/襄城育人学校.png"></img>
+          <img :src="$store.state.logo['郑州航空港区育人高级中学']"></img>
         </div>
       </div>
     </div>
@@ -59,8 +59,6 @@ export default {
   data () {
     return {
       currentdata:{},
-      mapview:require("html-loader!../html/map.html"),
-      map:require('../assets/logo/育人男中.png'),
       showmap1:'none',showmap2:'none',showmap3:'none',showmap4:'none'
     }
   },
@@ -96,14 +94,20 @@ export default {
           this.showmap1='none'
           break;
       }
+    },
+    getsrc(){
+      let name = this.$route.params.name.toString()
+      this.currentdata = this.$store.state.schoolday.find(function(a){return a.id == name})
     }
   },
   created(){
-    let name = this.$route.params.name.toString()
-    this.currentdata = this.$store.state.schoolday.find(function(a){return a.title == name})
+    this.getsrc()
     if(window.innerWidth<900){
-      this.$router.push('/msd/'+name)
+      this.$router.push('/m/sd/'+this.$route.params.name)
     }
+  },
+  watch:{
+    "$route": "getsrc"
   }
 }
 

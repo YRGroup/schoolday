@@ -1,11 +1,11 @@
 <template>
-  <div @mouseenter="shownav = true" @mouseleave="shownav = false">
+  <div @mouseenter="shownav = true" @mouseleave="shownav = false" class="schoolday">
     <ul>
       <li v-for="(i,index) in $store.state.schoolday" 
         :class="(main==index)?'active':'unactive'" 
         @mouseover="thisplay(index)" 
         @mouseleave="stopplay(index)"
-        @click="opensd(i.title)">
+        @click="opensd(i.id)">
 
         <video loop>
           <source :src="i.video" type="video/webm">
@@ -65,13 +65,21 @@ export default {
 <style lang="less" scoped>
 @titleheight: 5em;
 
+@height:calc(100vh-3em);
+
+.schoolday{
+  background: #000;
+  height: @height;
+  padding-top:3em;
+  overflow: hidden;
+}
 ul {
-  height: 100%;
+  height: @height;
   color: #fff;
   display: flex;
   flex-wrap: nowrap;
   li {
-    height: 100vh;
+    height: @height;
     float: left;
     text-align: center;
     position: relative;
@@ -82,8 +90,8 @@ ul {
       position: absolute;
       top: 0;
       left: -50%;
-      z-index: -1;
-      height: 100vh;
+      z-index: 1;
+      height: @height;
       width: auto;
     }
     

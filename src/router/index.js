@@ -3,12 +3,12 @@ import Router from 'vue-router'
 
 // PC页面
 import schoolday from '@/page/schoolday'
-import schooldayV2 from '@/page/schooldayV2'
+import SD from '@/page/SD'
 import seven from '@/page/720'
 
 // 手机版页面
 import mobileschoolday from '@/mobile/schoolday'
-import mobileschooldayV2 from '@/mobile/schooldayV2'
+import m_SD from '@/mobile/SD'
 
 Vue.use(Router)
 
@@ -28,8 +28,8 @@ export default new Router({
     },
     {
       path: '/sd/:name',
-      name: 'schooldayV2',
-      component: schooldayV2
+      name: 'SD',
+      component: SD
     },
 
 // 手机版页面
@@ -39,9 +39,9 @@ export default new Router({
       component: mobileschoolday
     },
     {
-      path: '/msd/:name',
-      name: 'mobileschooldayV2',
-      component: mobileschooldayV2
+      path: '/m/sd/:name',
+      name: 'm_SD',
+      component: m_SD
     }
   ]
 })

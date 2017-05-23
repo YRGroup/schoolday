@@ -1,18 +1,5 @@
 <template>
   <div class="seven">
-    <!--<div class="nav">
-      <img src="../assets/VIS008.png">
-      <div class="subnav">
-        <span>切换学校</span>
-        <ul>
-          <li @click="iframesrc = 'http://www.gy720.com/pano/view/9986'">郑州航空港区育人国际学校</li>
-          <li @click="iframesrc = 'http://www.gy720.com/pano/view/9989'">郑州外国语女子中学</li>
-          <li @click="iframesrc = 'http://www.gy720.com/pano/view/9991'">郑州航空港区育人高级中学</li>
-          <li @click="iframesrc = 'http://www.gy720.com/pano/view/10019'">襄城县育人宝贝幼儿园</li>
-        </ul>
-        
-      </div>
-    </div>-->
     <iframe :src="iframesrc"></iframe>
   </div>
 </template>
@@ -20,19 +7,22 @@
 <script>
 export default {
   name: 'hello',
-  // img:require('@/assets/VIS008.png'),
   data () {
     return {
       iframesrc:'http://www.gy720.com/pano/view/9986'
     }
   },
   methods:{
-    
+    getsrc(){
+      let school_id = this.$route.params.school.toString()
+      this.iframesrc = this.$store.state.data720.find(function(a){return a.id == school_id}).link
+    }
   },
   created(){
-    let school = this.$route.params.school.toString()
-    console.log(school)
-    this.iframesrc = this.$store.state.data720.find(function(a){return a.school == school}).link
+    this.getsrc()
+  },
+  watch:{
+    "$route": "getsrc"
   }
 }
 </script>

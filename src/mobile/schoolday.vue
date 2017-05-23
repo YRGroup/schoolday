@@ -10,7 +10,7 @@
             <img :src="i.icon">
             <p class="title">{{i.title}}</p>
           </div>
-          <div class="btn" @click="opensd(i.title)">查看更多</div>
+          <div class="btn" @click="opensd(i.id)">查看更多</div>
           <p class="summary">{{i.summary}}</p>
         </div>
 
@@ -53,7 +53,7 @@ export default {
       let card = document.getElementsByClassName('video')
     },
     opensd(name){
-      this.$router.push('/msd/'+name)
+      this.$router.push('/m/sd/'+name)
     }
   },
   created(){
@@ -121,7 +121,7 @@ ul {
       position: absolute;
       top:0;
       width: 100vw;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.6);
     }
   }
   .active {
