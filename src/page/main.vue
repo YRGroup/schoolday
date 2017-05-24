@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 iframe{
   width:100%;
   height:calc(100vh-3em);
