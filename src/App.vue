@@ -59,7 +59,11 @@ export default {
         overflow:'hidden'
       },
       style2:{
+<<<<<<< HEAD
         height:'30.5vh',
+=======
+        // height:'100vh',
+>>>>>>> 58695d17cd3b09ef804e6749a49f97b934b60324
       },
       nav:[
         {
@@ -209,7 +213,7 @@ a,a:link,a:hover,a:visited,a:active{
   z-index: 2000;
   color:#fff;
   width: 100vw;
-  height:100vh;
+  // height:100vh;
   background: rgba(46, 46, 46,1);
   .logo{
     position: fixed;
