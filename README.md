@@ -1,21 +1,30 @@
 # schoolday
 
-> A Vue.js project
+> 育人集团网站主题页面
 
-## Build Setup
+## 使用方法
 
-``` bash
-# install dependencies
-npm install
+``` 命令行（PowerShell、cmd）
+# 安装项目依赖库
+cnpm i
 
-# serve with hot reload at localhost:8080
+# 运行本地热重载服务器 localhost:8080
 npm run dev
 
-# build for production with minification
+# 打包压缩项目
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+目录结构：  
+- 源码 ../src/
+- 素材 ../src/assets/
+- html模板  ../index.html
+- 入口文件  ../src/main.js
+- 主页面  ../src/App.vue
+- 公用数据  ../src/store/index.js
+- PC页面  ../src/page
+- 移动端页面  ../src/mobile
+- 路由表  ../src/router/index.js
+- 打包后的静态文件  ../dist
+- 项目配置文件  ../config  ../build
