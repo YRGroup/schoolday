@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // PC页面
+import main from '@/page/main'
 import schoolday from '@/page/schoolday'
 import SD from '@/page/SD'
 import seven from '@/page/720'
@@ -18,11 +19,11 @@ export default new Router({
 // PC页面
     {
       path: '/',
-      name: 'schoolday',
-      component: schoolday
+      name: 'main',
+      component: main
     },
     {
-      path: '/main',
+      path: '/schoolday',
       name: 'schoolday',
       component: schoolday
     },

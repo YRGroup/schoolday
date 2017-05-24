@@ -69,35 +69,40 @@ export default {
         },
         {
           title:'School Day',
-          link:'/sd/combat',
-          isSub:true,
-          sub:[
-            {
-              title:'散打',
-              link:'/sd/combat'
-            },
-            {
-              title:'舞蹈',
-              link:'/sd/dance'
-            },
-            {
-              title:'西点寿司',
-              link:'/sd/sushi'
-            },
-            {
-              title:'跆拳道',
-              link:'/sd/taekwondo'
-            },
-            {
-              title:'金丝沙画',
-              link:'/sd/sand'
-            },
-            {
-              title:'非洲鼓',
-              link:'/sd/drum'
-            },
-          ]
+          isSub:false,
+          link:'/schoolday'
         },
+        // {
+        //   title:'School Day',
+        //   link:'/sd/combat',
+        //   isSub:true,
+        //   sub:[
+        //     {
+        //       title:'散打',
+        //       link:'/sd/combat'
+        //     },
+        //     {
+        //       title:'舞蹈',
+        //       link:'/sd/dance'
+        //     },
+        //     {
+        //       title:'西点寿司',
+        //       link:'/sd/sushi'
+        //     },
+        //     {
+        //       title:'跆拳道',
+        //       link:'/sd/taekwondo'
+        //     },
+        //     {
+        //       title:'金丝沙画',
+        //       link:'/sd/sand'
+        //     },
+        //     {
+        //       title:'非洲鼓',
+        //       link:'/sd/drum'
+        //     },
+        //   ]
+        // },
         {
           title:'全景学校',
           link:'/s/gj',
