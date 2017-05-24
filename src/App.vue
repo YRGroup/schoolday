@@ -59,7 +59,7 @@ export default {
         overflow:'hidden'
       },
       style2:{
-        height:'100vh',
+        height:'25vh',
       },
       nav:[
         {
@@ -121,7 +121,7 @@ export default {
               link:'/s/nn'
             },
             {
-              title:'襄城县育人宝贝幼儿园',
+              title:'襄城育人国际学校',
               link:'/s/bb'
             }
           ]
