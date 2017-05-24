@@ -59,11 +59,10 @@ export default {
         overflow:'hidden'
       },
       style2:{
-<<<<<<< HEAD
+
         height:'30.5vh',
-=======
-        // height:'100vh',
->>>>>>> 58695d17cd3b09ef804e6749a49f97b934b60324
+
+
       },
       nav:[
         {
