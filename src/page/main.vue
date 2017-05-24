@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      iframesrc:'http://www.yearnedu.com/'
+      iframesrc:'http://main.yearnedu.com/'
     }
   }
 }
@@ -20,5 +20,10 @@ iframe{
   height:calc(100vh-3em);
   border:none;
   margin-top:3em;
+}
+@media screen and (max-width:800px){
+  iframe{
+    margin-top:2em;
+  }
 }
 </style>
