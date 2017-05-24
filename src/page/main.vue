@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      iframesrc:'http://www.yearnedu.com/'
+      iframesrc:'http://main.yearnedu.com/'
     }
   }
 }
