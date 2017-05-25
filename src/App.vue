@@ -59,7 +59,7 @@ export default {
         overflow:'hidden'
       },
       style2:{
-        // height:'320px',
+        height:'320px',
       },
       nav:[
         {
@@ -68,7 +68,7 @@ export default {
           link:'/'
         },
         {
-          title:'育人学校',
+          title:'育人集团旗下学校',
           link:'/',
           isSub:true,
           sub:[
@@ -240,7 +240,6 @@ a,a:link,a:hover,a:visited,a:active{
   z-index: 2000;
   color:#fff;
   width: 100vw;
-  // height:100vh;
   background: rgba(46, 46, 46,1);
   .logo{
     position: fixed;
