@@ -209,6 +209,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+<<<<<<< HEAD
 .index{
   padding-top:3rem;
   min-width: 320px;
@@ -221,6 +222,10 @@ export default {
   background-color: transparent;
   background-position: center center;
   background-image: url('//nzr2ybsda.qnssl.com/images/33905/lsaH1ljohdcuLgHmTMcax4vzBQ54.jpg?imageMogr2/strip/thumbnail/2000x1500>/quality/90!/interlace/1/format/jpg');
+=======
+
+iframe{
+>>>>>>> c897b8e568e34b1fd64d4429365e1dd9059c8d75
   width:100%;
   text-align: center;
   min-height: 900px;
