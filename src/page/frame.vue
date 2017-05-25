@@ -1,6 +1,6 @@
 <template>
   <div class="seven">
-    <iframe :src="iframesrc"></iframe>
+    <!--<iframe :src="iframesrc"></iframe>-->
   </div>
 </template>
 
@@ -9,13 +9,14 @@ export default {
   name: 'hello',
   data () {
     return {
-      iframesrc:'http://www.gy720.com/pano/view/9986'
+      iframesrc:'http://main.yearnedu.com/yearninternational'
     }
   },
   methods:{
     getsrc(){
       let school_id = this.$route.params.school.toString()
-      this.iframesrc = this.$store.state.data720.find(function(a){return a.id == school_id}).link
+      this.iframesrc = this.$store.state.framedata.find(function(a){return a.id == school_id}).link
+      window.location.href=this.iframesrc
     }
   },
   created(){

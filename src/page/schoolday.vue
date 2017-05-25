@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'schoolday',
   data () {
     return {
       main:5,
@@ -55,9 +55,9 @@ export default {
     }
   },
   created(){
-    if(window.innerWidth<900){
-      this.$router.push('m')
-    }
+    // if(window.innerWidth<900){
+    //   this.$router.push('/m')
+    // }
   }
 }
 </script>
@@ -70,7 +70,7 @@ export default {
 .schoolday{
   background: #000;
   height: @height;
-  padding-top:3em;
+  // padding-top:3em;
   overflow: hidden;
 }
 ul {

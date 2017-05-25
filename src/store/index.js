@@ -106,6 +106,37 @@ const store = new Vuex.Store({
         school: '襄城县育人宝贝幼儿园',
         link: 'http://www.gy720.com/pano/view/10019'
       }
+    ],
+    framedata: [{
+        id:'gj',
+        school: '郑州航空港区育人国际学校',
+        link: 'http://main.yearnedu.com/yearninternational'
+      },
+      {
+        id:'nz',
+        school: '郑州外国语女子中学',
+        link: 'http://main.yearnedu.com/zznz'
+      },
+      {
+        id:'nn',
+        school: '郑州航空港区育人高级中学',
+        link: 'http://main.yearnedu.com/hkgqyrgjzx'
+      },
+      {
+        id:'xc',
+        school: '襄城县育人国际学校',
+        link: 'http://main.yearnedu.com/fengmingedu'
+      },
+      {
+        id:'bb',
+        school: 'e-Baby台湾精致早教',
+        link: 'http://main.yearnedu.com/e-baby'
+      },
+      {
+        id:'ay',
+        school: '爱因斯坦国际幼儿园',
+        link: 'http://main.yearnedu.com/einstein'
+      }
     ]
   }
 })

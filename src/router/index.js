@@ -6,9 +6,11 @@ import main from '@/page/main'
 import schoolday from '@/page/schoolday'
 import SD from '@/page/SD'
 import seven from '@/page/720'
+import f from '@/page/frame'
 
 // 手机版页面
-import mobileschoolday from '@/mobile/schoolday'
+import m_main from '@/mobile/main'
+import m_schoolday from '@/mobile/schoolday'
 import m_SD from '@/mobile/SD'
 
 Vue.use(Router)
@@ -37,12 +39,22 @@ export default new Router({
       name: 'SD',
       component: SD
     },
+    {
+      path: '/f/:school',
+      name: 'f',
+      component: f
+    },
 
 // 手机版页面
     {
       path: '/m',
-      name: 'mobileschoolday',
-      component: mobileschoolday
+      name: 'm_main',
+      component: m_main
+    },
+    {
+      path: '/m/schoolday',
+      name: 'm_schoolday',
+      component: m_schoolday
     },
     {
       path: '/m/sd/:name',

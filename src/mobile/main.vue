@@ -118,10 +118,11 @@
         <p class="title">联系我们</p>
         <p>
           <p class="subTitle">河南·郑州</p>
-          <p class="subTitle">东区办公总部</p>
+          <p class="subTitle">东区行政总部</p>
           <p class="subTitle">郑东新区祥盛街8号福晟国际2号楼14F</p>
           <p class="subTitle">TEL：0371-55261585</p>
-          <p class="subTitle">Mail：contact@yurenedugroup.com</p>
+          <p class="subTitle">Mail：</p>
+          <p class="subTitle">contact@yurenedugroup.com</p>
         </p>
         <img src="//nzr2ybsda.qnssl.com/images/33905/FniBYK2bMlf5Nh182ex-9Y9Vom7R.jpg?imageMogr2/strip/thumbnail/1200x9000>/interlace/1/format/jpeg">
         <p>请关注我们的微信</p>
@@ -138,7 +139,7 @@
 </template>
 
 <script>
-import schoolday from '@/page/schoolday'
+import schoolday from '@/mobile/schoolday'
 
 export default {
   components:{
@@ -196,13 +197,12 @@ export default {
   },
   methods:{
     openNew(val){
-      window.location.href(val)
-
+      window.open(val)
     }
   },
   created(){
-    if(window.innerWidth<900){
-      this.$router.push('/m')
+    if(window.innerWidth>=900){
+      this.$router.push('/')
     }
   }
 }
@@ -210,7 +210,7 @@ export default {
 
 <style lang="less" scoped>
 .index{
-  padding-top:3rem;
+  padding-top:2rem;
   min-width: 320px;
   transform-style: preserve-3d;
   font-family: 'source sans pro','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;
@@ -223,13 +223,13 @@ export default {
   background-image: url('//nzr2ybsda.qnssl.com/images/33905/lsaH1ljohdcuLgHmTMcax4vzBQ54.jpg?imageMogr2/strip/thumbnail/2000x1500>/quality/90!/interlace/1/format/jpg');
   width:100%;
   text-align: center;
-  min-height: 900px;
+  height: 100vh;
   img{
-    margin-top:15rem;
+    margin-top:10rem;
   }
 }
 .section{
-  padding:5rem;
+  padding:2rem;
   text-align: center;
   transform: translateZ(0px);
   .card{
@@ -261,6 +261,7 @@ export default {
 }
 .section2{
   padding:0;
+  max-width: 100%;
 }
 .section4{
   background-repeat: no-repeat;
@@ -268,8 +269,8 @@ export default {
   background-color: transparent;
   background-position: 50.4487% 54.4868%;
   background-image: url('http://o0m4okv24.qnssl.com/static/backgrounds/blurred-bg/57.jpg');
-  height: 959px;
-  min-height: 959px;
+  // height: 750px
+  padding-bottom:10rem;
   color:#fff;
   position: relative;
   .swipe{
@@ -277,14 +278,13 @@ export default {
   }
   .video{
     margin: 0 auto;
-    max-width:800px;
     iframe{
       width: 100%;
-      height: 480px;
+      height: 240px;
     }
   }
   .dot{
-    margin:3rem -5rem;
+    margin:3rem -2rem;
     position:absolute;
     bottom:2rem;
     width:100%;
@@ -316,6 +316,9 @@ export default {
   background-color: transparent;
   background-position: center center;
   background-image: url('//nzr2ybsda.qnssl.com/images/33905/FsWGRsomaFrGy1Syre6nFqzmm1f1.jpg?imageMogr2/strip/thumbnail/2000x1500>/quality/90!/interlace/1/format/jpg');
+  .subTitle{
+    font-size: 0.85rem;
+  }
 }
 .section7{
   padding:3rem 0;
@@ -325,7 +328,7 @@ export default {
   }
 }
 .title{
-  font-size: 44px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 2em;
 }
@@ -362,27 +365,4 @@ button{
   to {transform: translateX(0)}
 }
 
-@media screen and (max-width:800px){
-  .section{
-    padding:2rem;
-  }
-  .section4{
-    .dot{
-      margin:3rem -2rem;
-    }
-  }
-  .index{
-    padding-top:2rem;
-  }
-}
-
-@media screen and (max-width:450px){
-  .section4{
-    .video{
-      iframe{
-        height:240px;
-      }
-    } 
-  }
-}
 </style>

@@ -43,7 +43,7 @@
       </ul>
     </div>
 
-    <router-view></router-view>
+    <router-view class="inview"></router-view>
 
   </div>
 </template>
@@ -59,16 +59,44 @@ export default {
         overflow:'hidden'
       },
       style2:{
-
-        height:'30.5vh',
-
-
+        // height:'320px',
       },
       nav:[
         {
           title:'主页',
           isSub:false,
           link:'/'
+        },
+        {
+          title:'育人学校',
+          link:'/',
+          isSub:true,
+          sub:[
+            { 
+              title:'郑州航空港区育人国际学校',
+              link:'/f/gj'
+            },
+            {
+              title:'郑州外国语女子中学',
+              link:'/f/nz'
+            },
+            {
+              title:'郑州航空港区育人高级中学',
+              link:'/f/nn'
+            },
+            {
+              title:'襄城育人国际学校',
+              link:'/f/xc'
+            },
+            {
+              title:'e-Baby台湾精致早教',
+              link:'/f/bb'
+            },
+            {
+              title:'爱因斯坦国际幼儿园',
+              link:'/f/ay'
+            }
+          ]
         },
         {
           title:'School Day',
@@ -232,6 +260,7 @@ a,a:link,a:hover,a:visited,a:active{
     height:@navheight;
     top:0.6em;
     right:1.5em;
+    cursor: pointer;
     .menuicon,.closeicon{
       width:2em;
       opacity: 0.8;
@@ -300,13 +329,13 @@ a,a:link,a:hover,a:visited,a:active{
     position: fixed;
     right:.5em;
     top:.6em;
+    cursor: pointer;
     img{
       width:1.25em;
       opacity: 0.8;
     }
   }
   .mobile_content{
-    
     overflow-y: auto;
     overflow-x: auto;
     position: relative;
@@ -320,6 +349,7 @@ a,a:link,a:hover,a:visited,a:active{
     .mainnav{
       background: @maincolor;
       border-bottom:1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
       .arrow{
         display: none;
       }
@@ -361,12 +391,21 @@ a,a:link,a:hover,a:visited,a:active{
   to{right:0;}
 }
 
-@media screen and (max-width:800px){
+.inview{
+  padding-top:3rem;
+}
+@media screen and (max-width:900px){
   .topnav{
     display: none;
+    *{
+      display: none;
+    }
   }
   .mobile_nav{
     display:block;
+  }
+  .inview{
+    padding-top:2rem;
   }
 }
 </style>

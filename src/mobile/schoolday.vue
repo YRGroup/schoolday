@@ -57,9 +57,9 @@ export default {
     }
   },
   created(){
-    if(window.innerWidth>=900){
-      this.$router.push('/')
-    }
+    // if(window.innerWidth>=900){
+    //   this.$router.push('/')
+    // }
   }
 }
 </script>
@@ -67,7 +67,6 @@ export default {
 <style lang="less" scoped>
 ul {
   color: #fff;
-  padding-top: 2em;
   li {
     width: 100vw;
     text-align: center;
