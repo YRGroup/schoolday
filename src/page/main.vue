@@ -8,7 +8,7 @@
         <p class="title">集团简介</p>
         <p class="subTitle">风雨砥砺十余载·厚德载物谱新章</p>
         </br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/lsCl7npKanAdoOhch_3AlXIbe7q7.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/lsCl7npKanAdoOhch_3AlXIbe7q7.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpg" alt="郑州航空港育人国际学校">
         <p class="itemTitle">特色铸就品牌·课研促进发展</p>
         </br>
         <li>郑州育人学校由刘付坤校长于2000年创办，至今已在郑州发展16年，于2014年成立教育集团，并在创始人家乡襄城县建设了一所学校。十多年来，学校遵循“以人为本，因材施教”的核心育人理念，争取帮助每一个孩子打开了解世界的一扇窗。</li>
@@ -33,27 +33,27 @@
         <p class="title">育人教育</p>
         <p class="subTitle">以人为本 · 因材施教</p>
         </br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/FlBD03iVA8L3mlI_YHL6RG7-D5mz.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/FlBD03iVA8L3mlI_YHL6RG7-D5mz.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州航空港育人国际学校">
         <p @click="openNew('/f/gj')"><span class="sLink">郑州航空港育人国际学校</span></p>
         <p>心智合一，博雅致远</p>
         </br></br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/Fg8mRT7-u3RUbg6em_RB0SSPR2el.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/Fg8mRT7-u3RUbg6em_RB0SSPR2el.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州外国语女子中学">
         <p @click="openNew('/f/nz')"><span class="sLink">郑州外国语女子中学</span></p>
         <p>优秀优雅，秀外慧中</p>
         </br></br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/FtvWD6ej4q6HTm8uAG0Xa1L1PjvG.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/FtvWD6ej4q6HTm8uAG0Xa1L1PjvG.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州航空港区育人高级中学">
         <p @click="openNew('/f/nn')"><span class="sLink">郑州航空港区育人高级中学</span></p>
         <p>勇于优秀 · 敢于担当</p>
         </br></br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/Fuq3lvp5hte9ElNvOqMoX-_RsywW.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/Fuq3lvp5hte9ElNvOqMoX-_RsywW.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="襄城育人国际学校">
         <p @click="openNew('/f/xc')"><span class="sLink">襄城育人国际学校</span></p>
         <p>不鸣则已，一鸣惊人</p>
         </br></br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/FmK_XVGxYYSv3YAiGToHXuhsuKnj.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/FmK_XVGxYYSv3YAiGToHXuhsuKnj.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="e-BABY精致早教">
         <p @click="openNew('/f/bb')"><span class="sLink">e-BABY精致早教</span></p>
         <p>因为爱，懂宝贝才能更爱宝贝。</p>
         </br></br>
-        <img src="//nzr2ybsda.qnssl.com/images/33905/FiN-5tVmn3bWmXxRFwTrcjtQH6Yl.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg">
+        <img src="//nzr2ybsda.qnssl.com/images/33905/FiN-5tVmn3bWmXxRFwTrcjtQH6Yl.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="爱因斯坦国际幼儿园">
         <p @click="openNew('/f/ay')"><span class="sLink">爱因斯坦国际幼儿园</span></p>
         <p>国际化 · 优质化 · 特色化</p>
         </br></br>
@@ -69,7 +69,7 @@
         </br>
         <p class="title">{{i.title}}</p>
         <p class="subTitle" style="color:#fff">{{i.subTitle}}</p>
-        <button @click="openNew(i.link)">访问官网</button>
+        <button @click="openNew(i.link)">查看更多</button>
       </div>
 
       <div class="dot">
@@ -85,27 +85,27 @@
         <p class="title">校长介绍</p>
         <div class="flex">
           <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人国际学校校长 贾莉">
             <p class="itemTitle">贾莉</p>
             <p class="subTitle">育人国际学校校长</p>
           </div>
           <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Ft0WgKY4JnxbwK9DotQ1VjrnokE4.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Ft0WgKY4JnxbwK9DotQ1VjrnokE4.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="郑州外国语女子中学校长 宋立琴">
             <p class="itemTitle">宋立琴</p>
             <p class="subTitle">郑州外国语女子中学校长</p>
           </div>
           <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="航空港区育人高级中学校长 祁宏伟">
             <p class="itemTitle">祁宏伟</p>
             <p class="subTitle">港区育人高级中学校长</p>
           </div>
           <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人教育集团党委书记 蔡政权">
             <p class="itemTitle">蔡政权</p>
             <p class="subTitle">育人教育集团党委书记</p>
           </div>
           <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
             <p class="itemTitle">陈凤山</p>
             <p class="subTitle">育人教育集团总校长</p>
           </div>
@@ -151,19 +151,19 @@ export default {
         {
           title:'郑州外国语女子中学',
           subTitle:'优秀优雅，秀外慧中',
-          link:'http://www.zznz.org/',
+          link:'http://v.youku.com/v_show/id_XMTY1NzYxODE2MA==.html',
           video:'http://player.youku.com/embed/XMTY1NzYxODE2MA=='
         },
         {
           title:'郑州航空港区育人高级中学',
           subTitle:'勇于优秀 · 敢于担当',
-          link:'http://www.hkgqyrgjzx.com/',
+          link:'http://v.youku.com/v_show/id_XMTY3MjQ3MjgyNA==.html',
           video:'http://player.youku.com/embed/XMTY3MjQ3MjgyNA=='
         },
         {
           title:'[花young年华]',
           subTitle:'郑州外国语女子中学2017新年联欢晚会后台花絮',
-          link:'http://www.zznz.org/',
+          link:'http://v.youku.com/v_show/id_XMjQ4MzE3NDg5Ng==.html',
           video:'http://player.youku.com/embed/XMjQ4MzE3NDg5Ng=='
         },
         {
@@ -196,7 +196,7 @@ export default {
   },
   methods:{
     openNew(val){
-      this.$router.push(val)
+      window.open(val)
     }
   },
   created(){
