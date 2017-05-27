@@ -24,6 +24,10 @@ export default new Router({
       name: 'main',
       component: main
     },
+
+    { path: '*', 
+      component: main 
+    },
     {
       path: '/schoolday',
       name: 'schoolday',
