@@ -34,27 +34,27 @@
         <p class="subTitle">以人为本 · 因材施教</p>
         </br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/FlBD03iVA8L3mlI_YHL6RG7-D5mz.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州航空港育人国际学校">
-        <p @click="openNew('/f/gj')"><span class="sLink">郑州航空港育人国际学校</span></p>
+        <p @click="$router.push('/f/gj')"><span class="sLink">郑州航空港育人国际学校</span></p>
         <p>心智合一，博雅致远</p>
         </br></br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/Fg8mRT7-u3RUbg6em_RB0SSPR2el.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州外国语女子中学">
-        <p @click="openNew('/f/nz')"><span class="sLink">郑州外国语女子中学</span></p>
+        <p @click="$router.push('/f/nz')"><span class="sLink">郑州外国语女子中学</span></p>
         <p>优秀优雅，秀外慧中</p>
         </br></br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/FtvWD6ej4q6HTm8uAG0Xa1L1PjvG.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="郑州航空港区育人高级中学">
-        <p @click="openNew('/f/nn')"><span class="sLink">郑州航空港区育人高级中学</span></p>
+        <p @click="$router.push('/f/nn')"><span class="sLink">郑州航空港区育人高级中学</span></p>
         <p>勇于优秀 · 敢于担当</p>
         </br></br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/Fuq3lvp5hte9ElNvOqMoX-_RsywW.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="襄城育人国际学校">
-        <p @click="openNew('/f/xc')"><span class="sLink">襄城育人国际学校</span></p>
+        <p @click="$router.push('/f/xc')"><span class="sLink">襄城育人国际学校</span></p>
         <p>不鸣则已，一鸣惊人</p>
         </br></br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/FmK_XVGxYYSv3YAiGToHXuhsuKnj.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="e-BABY精致早教">
-        <p @click="openNew('/f/bb')"><span class="sLink">e-BABY精致早教</span></p>
+        <p @click="$router.push('/f/bb')"><span class="sLink">e-BABY精致早教</span></p>
         <p>因为爱，懂宝贝才能更爱宝贝。</p>
         </br></br>
         <img src="//nzr2ybsda.qnssl.com/images/33905/FiN-5tVmn3bWmXxRFwTrcjtQH6Yl.jpg?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/interlace/1/format/jpeg" alt="爱因斯坦国际幼儿园">
-        <p @click="openNew('/f/ay')"><span class="sLink">爱因斯坦国际幼儿园</span></p>
+        <p @click="$router.push('/f/ay')"><span class="sLink">爱因斯坦国际幼儿园</span></p>
         <p>国际化 · 优质化 · 特色化</p>
         </br></br>
       </div>
