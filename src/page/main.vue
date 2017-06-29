@@ -81,23 +81,24 @@
     </div>
 
     <div class="section section5">
-      <div class="card">
+      <div class="card" style="max-width:1570px">
         <p class="title">校长介绍</p>
         <div class="flex">
           <div class="item">
             <img src="//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人国际学校校长 贾莉">
             <p class="itemTitle">贾莉</p>
-            <p class="subTitle">育人国际学校校长</p>
+            <p class="subTitle">外语学院院长<br>原育人国际学校校长</p>
+            
           </div>
           <div class="item">
             <img src="//nzr2ybsda.qnssl.com/images/33905/Ft0WgKY4JnxbwK9DotQ1VjrnokE4.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="郑州外国语女子中学校长 宋立琴">
             <p class="itemTitle">宋立琴</p>
-            <p class="subTitle">郑州外国语女子中学校长</p>
+            <p class="subTitle">理科学院院长<br>原外国语女子中学校长</p>
           </div>
           <div class="item">
             <img src="//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="航空港区育人高级中学校长 祁宏伟">
             <p class="itemTitle">祁宏伟</p>
-            <p class="subTitle">港区育人高级中学校长</p>
+            <p class="subTitle">文科学院院长<br>原育人高级中学校长</p>
           </div>
           <div class="item">
             <img src="//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人教育集团党委书记 蔡政权">
@@ -108,6 +109,26 @@
             <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
             <p class="itemTitle">陈凤山</p>
             <p class="subTitle">育人教育集团总校长</p>
+          </div>
+          <div class="item">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
+            <p class="itemTitle">王爱华</p>
+            <p class="subTitle">育人国际学校<br>经开校区校长</p>
+          </div>
+          <div class="item">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
+            <p class="itemTitle">易芙蓉</p>
+            <p class="subTitle">育人国际学校<br>航空港校区校长</p>
+          </div>
+          <div class="item">
+            <img src="../assets/lxp.jpg" alt="育人教育集团总校长 陈凤山">
+            <p class="itemTitle">刘新平</p>
+            <p class="subTitle">外国语女子中学<br>省二实验经开校区校长</p>
+          </div>
+          <div class="item">
+            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
+            <p class="itemTitle">刘福星</p>
+            <p class="subTitle">郑州华夏中学校长</p>
           </div>
         </div>
       </div>
