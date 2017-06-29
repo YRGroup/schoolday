@@ -84,52 +84,31 @@
       <div class="card" style="max-width:1570px">
         <p class="title">校长介绍</p>
         <div class="flex">
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人国际学校校长 贾莉">
-            <p class="itemTitle">贾莉</p>
-            <p class="subTitle">外语学院院长<br>原育人国际学校校长</p>
-            
+          <div class="item" v-for="(i,index) in xiaozhangInfo" @click="openXiaozhangPopup(index)">
+            <img :src="i.face" alt="育人国际学校校长 贾莉">
+            <p class="itemTitle">{{ i.name }}</p>
+            <p class="subTitle">{{ i.job }}<br>{{ i.old_job }}</p>
           </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Ft0WgKY4JnxbwK9DotQ1VjrnokE4.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="郑州外国语女子中学校长 宋立琴">
-            <p class="itemTitle">宋立琴</p>
-            <p class="subTitle">理科学院院长<br>原外国语女子中学校长</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="航空港区育人高级中学校长 祁宏伟">
-            <p class="itemTitle">祁宏伟</p>
-            <p class="subTitle">文科学院院长<br>原育人高级中学校长</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg" alt="育人教育集团党委书记 蔡政权">
-            <p class="itemTitle">蔡政权</p>
-            <p class="subTitle">育人教育集团党委书记</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
-            <p class="itemTitle">陈凤山</p>
-            <p class="subTitle">育人教育集团总校长</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
-            <p class="itemTitle">王爱华</p>
-            <p class="subTitle">育人国际学校<br>经开校区校长</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
-            <p class="itemTitle">易芙蓉</p>
-            <p class="subTitle">育人国际学校<br>航空港校区校长</p>
-          </div>
-          <div class="item">
-            <img src="../assets/lxp.jpg" alt="育人教育集团总校长 陈凤山">
-            <p class="itemTitle">刘新平</p>
-            <p class="subTitle">外国语女子中学<br>省二实验经开校区校长</p>
-          </div>
-          <div class="item">
-            <img src="//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg" alt="育人教育集团总校长 陈凤山">
-            <p class="itemTitle">刘福星</p>
-            <p class="subTitle">郑州华夏中学校长</p>
-          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--校长详情弹窗-->
+    <div class="xiaozhang_popup" v-show="show_xiaozhang_popup">
+      <div class="wrap" @click="show_xiaozhang_popup=false"></div>
+      <div class="container">
+        <img class="faceImg" :src='xiaozhang_popup_data.face'>
+        <div class="header">
+          <p class="name">{{xiaozhang_popup_data.name}}</p>
+          <p>
+            <span>{{xiaozhang_popup_data.job}}</span>
+            <span>{{xiaozhang_popup_data.job2}}</span>
+          </p>
+          <div class="close" @click="show_xiaozhang_popup=false">X</div>
+        </div>
+        <div class="hr"></div>
+        <div class="body">
+          <p v-for="p in xiaozhang_popup_data.info">{{p}}</p>
         </div>
       </div>
     </div>
@@ -212,13 +191,110 @@ export default {
           video:'http://player.youku.com/embed/XMjUyMDA0MjA5Mg=='
         },
       ],
+      xiaozhangInfo:[
+        {
+          name:'贾莉',
+          face:'//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'外语学院院长',
+          old_job:'原育人国际学校校长',
+          job2:'博士',
+          info:[
+            '巴啦啦能量---呼尼拉---魔仙变身',
+          ],
+        },
+        {
+          name:'宋立琴',
+          face:'//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'文科学院院长',
+          old_job:'原育人国际学校校长',
+          job2:'博士',
+          info:[
+            '巴拉拉能量---哗哗必---转移 ',
+          ],
+        },
+        {
+          name:'蔡政权',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'育人教育集团党委书记',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段'
+          ],
+        },
+        {
+          name:'陈凤山',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人教育集团总校长',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+          ],
+        },
+        {
+          name:'王爱华',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人国际学校',
+          old_job:'经开校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+          ],
+        },
+        {
+          name:'易芙蓉',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人国际学校',
+          old_job:'航空港校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 '
+          ],
+        },
+        {
+          name:'刘新平',
+          face:require('@/assets/lxp.jpg'),
+          job:'外国语女子中学',
+          old_job:'省二实验经开校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 '
+          ],
+        },
+        {
+          name:'刘福星',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'郑州华夏中学校长',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 '
+          ],
+        },
+      ],
+      xiaozhang_popup_data:{
+        name:'',
+        face:'',
+        job:'',
+        old_job:'',
+        job2:'',
+        info:[''],
+      },
+      show_xiaozhang_popup:false,
       swipeIndex:0
     }
   },
   methods:{
     openNew(val){
       window.open(val)
-    }
+    },
+    openXiaozhangPopup(val){
+      this.xiaozhang_popup_data = this.xiaozhangInfo[val]
+      this.show_xiaozhang_popup = true
+    },
   },
   created(){
     if(window.innerWidth<900){
@@ -232,6 +308,7 @@ export default {
 .index{
   padding-top:3rem;
   min-width: 320px;
+  overflow-y: auto;
   transform-style: preserve-3d;
   font-family: 'source sans pro','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;
 }
@@ -329,6 +406,64 @@ export default {
   background-color: transparent;
   background-position: center center;
   background-image: url('http://o0m4okv24.qnssl.com/static/backgrounds/striking-pack-2/28.jpg');
+}
+.xiaozhang_popup{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  z-index: 50;
+  
+  left:0;
+  bottom:0;
+  .wrap{
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 100;
+  }
+  .container{
+    z-index: 110;
+    position: absolute;
+    bottom:15%;
+    left:15%;
+    right:15%;
+    min-height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding:2rem;
+    .faceImg{
+      max-width:150px;
+      border-radius: 15px;
+    }
+    .header{
+      display: inline-block;
+      padding-left:1rem;
+      .name{
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .close{
+        position: absolute;
+        right:1rem;
+        top:1rem;
+        color:red;
+      }
+    }
+    .hr{
+      background: #ccc;
+      height:1px;
+      width:100%;
+      margin:1rem 0;
+    }
+    .body{
+      p{
+        text-indent: 2em;
+      }
+    }
+  }
 }
 .section6{
   background-repeat: no-repeat;
