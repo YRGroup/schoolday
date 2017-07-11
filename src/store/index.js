@@ -137,7 +137,105 @@ const store = new Vuex.Store({
         school: '爱因斯坦国际幼儿园',
         link: 'http://main.yearnedu.com/einstein'
       }
-    ]
+    ],
+    xiaozhangInfo:[
+        {
+          name:'贾莉',
+          face:'//nzr2ybsda.qnssl.com/images/33905/FqhRcnfTC8IoM-Fr1Tcv3lY5bNQR.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'外语学院院长',
+          old_job:'原育人国际学校校长',
+          job2:'博士',
+          info:[
+            '巴啦啦能量---呼尼拉---魔仙变身',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'宋立琴',
+          face:'//nzr2ybsda.qnssl.com/images/33905/FrliCbZtYbjiP54tuctgI8lBfbBm.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'文科学院院长',
+          old_job:'原育人国际学校校长',
+          job2:'博士',
+          info:[
+            '郑州育人学校由刘付坤校长于2000年创办，至今已在郑州发展16年，于2014年成立教育集团，并在创始人家乡襄城县建设了一所学校。十多年来，学校遵循“以人为本，因材施教”的核心育人理念，争取帮助每一个孩子打开了解世界的一扇窗。2016年5月和6月，郑州育人教育集团先后与美国名校普渡大学和美国德州大学圣安东尼奥分校签订了校长和师资培训合作协议；2016年5月，引入台湾e-BABY国际教育集团理念的早教中心投入运营； ',
+            '教育的意义是在孩子成长过程中起到良好的引领作用。我们一直在努力，为教育添砖加瓦，把教育工作当成使命，把教育理念融入信仰，汲取中西方教育的精华，传承中华民族教育的根基，郑州育人教育集团矢志不渝的奔走在路上。',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'蔡政权',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fpjd_AgZDSxC4hSI0ibaNGQV8OoZ.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpg',
+          job:'育人教育集团党委书记',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'陈凤山',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人教育集团总校长',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'王爱华',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人国际学校',
+          old_job:'经开校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'易芙蓉',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'育人国际学校',
+          old_job:'航空港校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'刘新平',
+          face:require('@/assets/lxp.jpg'),
+          job:'外国语女子中学',
+          old_job:'省二实验经开校区校长',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+        {
+          name:'刘福星',
+          face:'//nzr2ybsda.qnssl.com/images/33905/Fhb65h0R2vIhmev57Tkj6tUe1jeg.jpg?imageMogr2/strip/thumbnail/720x1440>/quality/90!/interlace/1/format/jpeg',
+          job:'郑州华夏中学校长',
+          old_job:'',
+          job2:'',
+          info:[
+            '巴啦啦能量---乌特拉---魔仙力量提升 ',
+            '这是第二段',
+            '这是第三段',
+          ],
+        },
+      ],
   }
 })
 
