@@ -1,74 +1,77 @@
 <template>
   <div class="seven">
     <!--<iframe :src="iframesrc"></iframe>-->
+    000
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
-  data () {
+  data() {
     return {
-      iframesrc:'http://main.yearnedu.com/yearninternational'
+
     }
   },
-  methods:{
-    getsrc(){
+  methods: {
+    getsrc() {
       let school_id = this.$route.params.school.toString()
-      this.iframesrc = this.$store.state.framedata.find(function(a){return a.id == school_id}).link
-      window.location.href=this.iframesrc
+      // this.iframesrc = this.$store.state.framedata.find(function(a){return a.id == school_id}).link
+      // window.location.href=this.iframesrc
     }
   },
-  created(){
+  created() {
     this.getsrc()
   },
-  watch:{
+  watch: {
     "$route": "getsrc"
   }
 }
 </script>
 
 <style lang="less" scoped>
-.nav{
-  width:100%;
-  height:6em;
-  background: linear-gradient(to right,rgba(255,255,255,1),rgba(0,0,0,0));
+.nav {
+  width: 100%;
+  height: 6em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
   text-align: center;
-  vertical-align:middle;
+  vertical-align: middle;
   position: fixed;
-  img{
-    height:4em;
-    margin-top:1em;
+  img {
+    height: 4em;
+    margin-top: 1em;
     z-index: 100;
   }
-  .subnav{
+  .subnav {
     position: absolute;
-    left:0;
-    top:0;
-    color:#000;
-    width:15em;
+    left: 0;
+    top: 0;
+    color: #000;
+    width: 15em;
     cursor: pointer;
-    span{
+    span {
       line-height: 6em;
     }
-    ul{
+    ul {
       display: none;
-      background:rgba(255,255,255,0.7);
-      li{
-        padding:1em;
+      background: rgba(255, 255, 255, 0.7);
+      li {
+        padding: 1em;
       }
     }
-    &:hover ul{
+    &:hover ul {
       display: block;
     }
   }
 }
-.seven{
+
+.seven {
   background: #000;
 }
-iframe{
-  width:100%;
-  height:calc(100vh-5em);
-  border:none;
+
+iframe {
+  width: 100%;
+  height: calc(100vh-5em);
+  border: none;
 }
 </style>

@@ -7,6 +7,7 @@ import schoolday from '@/page/schoolday'
 import SD from '@/page/SD'
 import seven from '@/page/720'
 import f from '@/page/frame'
+import s from '@/page/schoolPage'
 
 // 手机版页面
 import m_main from '@/mobile/main'
@@ -35,8 +36,8 @@ export default new Router({
     },
     {
       path: '/s/:school',
-      name: 'seven',
-      component: seven
+      name: 's',
+      component: s
     },
     {
       path: '/sd/:name',
