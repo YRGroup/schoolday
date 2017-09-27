@@ -7,13 +7,13 @@
       </div>
       <div class="navbtn">
         <img v-show="!onmouseover" @click="onmouseover=true" class="menuicon" src="./assets/icon/menu.png">
-        <img v-show="onmouseover"  @click="onmouseover=false" class="closeicon" src="./assets/icon/close.png">
+        <img v-show="onmouseover" @click="onmouseover=false" class="closeicon" src="./assets/icon/close.png">
       </div>
-      <ul class="content" >
-        <li class="mainnav" v-for="i in nav" @click="(i.isSub)?null:$router.push(i.link),onmouseover=false">
+      <ul class="content">
+        <li class="mainnav" :key="index" v-for="(i,index) in nav" @click="(i.isSub)?null:$router.push(i.link),onmouseover=false">
           <span :class="(i.isSub)?'sub_nav_title':null">{{i.title}}</span>
           <ul :class="(i.isSub)?'sub_nav':null">
-            <li v-for="s in i.sub" @click="$router.push(s.link)">
+            <li v-for="(s,sIndex) in i.sub" :key="sIndex" @click="$router.push(s.link)">
               {{s.title}}
             </li>
           </ul>
@@ -27,15 +27,15 @@
       </div>
       <div class="navbtn">
         <img v-show="!onmouseover" @click="onmouseover=true" class="menuicon" src="./assets/icon/menu.png">
-        <img v-show="onmouseover"  @click="onmouseover=false" class="closeicon" src="./assets/icon/close.png">
+        <img v-show="onmouseover" @click="onmouseover=false" class="closeicon" src="./assets/icon/close.png">
       </div>
       <ul class="mobile_content" v-show="onmouseover">
-        <li class="mainnav" :class="(i.isSub)?'isSub':'notSub'" v-for="(i,index) in nav" @click="(i.isSub)?showsubnav(index):($router.push(i.link),onmouseover=false)">
+        <li class="mainnav" :class="(i.isSub)?'isSub':'notSub'" v-for="(i,index) in nav" :key="index" @click="(i.isSub)?showsubnav(index):($router.push(i.link),onmouseover=false)">
           <span class="main_nav_title">{{i.title}}</span>
           <img class="arrow" src="./assets/icon/down.png"></img>
           <ul :class="(i.isSub)?'subnav subnav'+index:'hidden'">
-            <li class="sub_nav_item" v-for="s in i.sub" @click="$router.push(s.link),onmouseover=false">
-              <span >{{s.title}}</span>
+            <li class="sub_nav_item" v-for="(s,sIndex) in i.sub" :key="sIndex" @click="$router.push(s.link),onmouseover=false">
+              <span>{{s.title}}</span>
             </li>
           </ul>
         </li>
@@ -51,57 +51,57 @@
 <script>
 export default {
   name: 'app',
-  data(){
-    return{
-      onmouseover:false,
-      style1:{
-        height:'3em',
-        overflow:'hidden'
+  data() {
+    return {
+      onmouseover: false,
+      style1: {
+        height: '3em',
+        overflow: 'hidden'
       },
-      style2:{
-        height:'370px',
+      style2: {
+        height: '370px',
       },
-      nav:[
+      nav: [
         {
-          title:'主页',
-          isSub:false,
-          link:'/'
+          title: '主页',
+          isSub: false,
+          link: '/'
         },
         {
-          title:'育人集团旗下学校',
-          link:'/',
-          isSub:true,
-          sub:[
-            { 
-              title:'郑州航空港区育人国际学校',
-              link:'/s/gjxx'
+          title: '育人集团旗下学校',
+          link: '/',
+          isSub: true,
+          sub: [
+            {
+              title: '郑州航空港区育人国际学校',
+              link: '/s/gjxx'
             },
             {
-              title:'郑州外国语女子中学',
-              link:'/s/nzzx'
+              title: '郑州外国语女子中学',
+              link: '/s/nzzx'
             },
             {
-              title:'郑州航空港区育人高级中学',
-              link:'/s/gjzx'
+              title: '郑州航空港区育人高级中学',
+              link: '/s/gjzx'
             },
             {
-              title:'襄城育人国际学校',
-              link:'/s/xcyr'
+              title: '襄城育人国际学校',
+              link: '/s/xcyr'
             },
             {
-              title:'e-Baby台湾精致早教',
-              link:'/s/baby'
+              title: 'e-Baby台湾精致早教',
+              link: '/s/baby'
             },
             {
-              title:'爱因斯坦国际幼儿园',
-              link:'/s/ayst'
+              title: '爱因斯坦国际幼儿园',
+              link: '/s/ayst'
             }
           ]
         },
         {
-          title:'School Day',
-          isSub:false,
-          link:'/schoolday'
+          title: 'School Day',
+          isSub: false,
+          link: '/schoolday'
         },
         // {
         //   title:'School Day',
@@ -135,57 +135,57 @@ export default {
         //   ]
         // },
         {
-          title:'全景学校',
-          link:'/seven/gj',
-          isSub:true,
-          sub:[
-            { 
-              title:'郑州航空港区育人国际学校',
-              link:'/seven/gj'
+          title: '全景学校',
+          link: '/seven/gj',
+          isSub: true,
+          sub: [
+            {
+              title: '郑州航空港区育人国际学校',
+              link: '/seven/gj'
             },
             {
-              title:'郑州外国语女子中学',
-              link:'/seven/nz'
+              title: '郑州外国语女子中学',
+              link: '/seven/nz'
             },
             {
-              title:'郑州航空港区育人高级中学',
-              link:'/seven/nn'
+              title: '郑州航空港区育人高级中学',
+              link: '/seven/nn'
             },
             {
-              title:'襄城育人国际学校',
-              link:'/seven/bb'
+              title: '襄城育人国际学校',
+              link: '/seven/bb'
             }
           ]
         }
       ]
     }
   },
-  methods:{
-    showsubnav(val){
+  methods: {
+    showsubnav(val) {
       let arrow = document.getElementsByClassName('arrow')
-      let el = document.getElementsByClassName('subnav'+val)
-      if(el[0].style.display!='block'){
-        arrow[val].style.transform='rotate(180deg)'
-        el[0].style.display='block'
-      }else{
-        arrow[val].style.transform='rotate(0deg)'
-        el[0].style.display='none'
+      let el = document.getElementsByClassName('subnav' + val)
+      if (el[0].style.display != 'block') {
+        arrow[val].style.transform = 'rotate(180deg)'
+        el[0].style.display = 'block'
+      } else {
+        arrow[val].style.transform = 'rotate(0deg)'
+        el[0].style.display = 'none'
       }
     },
-    navto(val){
-      this.$router.push('s/'+val)
-      this.onmouseover=false
+    navto(val) {
+      this.$router.push('s/' + val)
+      this.onmouseover = false
     }
   },
-  created(){
-    if(window.innerWidth<900){
-      this.style1={
-        height:'2em',
-        background:'#2e2e2e'
+  created() {
+    if (window.innerWidth < 900) {
+      this.style1 = {
+        height: '2em',
+        background: '#2e2e2e'
       }
-      this.style2={
-        height:'100vh',
-        background:'rgba(46, 46, 46,.5)'
+      this.style2 = {
+        height: '100vh',
+        background: 'rgba(46, 46, 46,.5)'
       }
     }
   }
@@ -193,218 +193,236 @@ export default {
 </script>
 
 <style lang="less">
-@font:STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
-@navheight:3em;
-@navheight2:2em;
+@font: STXihei,
+"华文细黑",
+"Microsoft YaHei",
+"微软雅黑";
+@navheight: 3em;
+@navheight2: 2em;
 
-@maincolor:#2e2e2e;
-@subcolor:#3b3b3b;
+@maincolor: #2e2e2e;
+@subcolor: #3b3b3b;
 
-body{
+body {
   overflow-x: hidden;
   font-family: @font;
 }
-pre{
+
+pre {
   font-family: @font;
 }
-*{
-  margin:0;
-  padding:0;
+
+* {
+  margin: 0;
+  padding: 0;
   transition: all .3s ease-in;
   box-sizing: border-box;
 }
-ul,li{
+
+ul,
+li {
   list-style: none;
 }
-a,a:link,a:hover,a:visited,a:active{
-  color:inherit;
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
   text-decoration: none;
 }
-.hidden{
+
+.hidden {
   display: none;
 }
-::-webkit-scrollbar  
-{  
-  width: 5px;  
-  height: 16px; 
-}  
-::-webkit-scrollbar-thumb  
-{  
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
-  background-color: #555;  
-}  
 
-.topnav{
+::-webkit-scrollbar {
+  width: 5px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+.topnav {
   position: fixed;
-  right:0;
+  right: 0;
   z-index: 2000;
-  color:#fff;
+  color: #fff;
   width: 100vw;
-  background: rgba(46, 46, 46,1);
-  .logo{
+  background: rgba(46, 46, 46, 1);
+  .logo {
     position: fixed;
-    left:1em;
+    left: 1em;
     height: @navheight;
     line-height: @navheight;
     text-align: center;
     transition: all .3s ease-in;
-    img{
-      height:2.5em;
+    img {
+      height: 2.5em;
       margin-top: .25em;
     }
   }
-  .navbtn{
+  .navbtn {
     position: fixed;
-    width:1.5em;
-    height:@navheight;
-    top:0.6em;
-    right:1.5em;
+    width: 1.5em;
+    height: @navheight;
+    top: 0.6em;
+    right: 1.5em;
     cursor: pointer;
-    .menuicon,.closeicon{
-      width:2em;
+    .menuicon,
+    .closeicon {
+      width: 2em;
       opacity: 0.8;
     }
   }
-  .content{
-    margin-top:@navheight;
+  .content {
+    margin-top: @navheight;
     z-index: 2500;
-    .mainnav{
+    .mainnav {
       line-height: 80px;
       height: 80px;
-      font-size: 27px; 
-      color:#fff;
+      font-size: 27px;
+      color: #fff;
       background: @subcolor;
       text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       cursor: pointer;
-      &:hover{
-        background: rgba(0,0,0,.3);
+      &:hover {
+        background: rgba(0, 0, 0, .3);
       }
-      &:hover .sub_nav_title{
+      &:hover .sub_nav_title {
         display: none;
       }
-      &:hover .sub_nav{
+      &:hover .sub_nav {
         display: block;
       }
-      .sub_nav{
+      .sub_nav {
         display: none;
         position: relative;
-        top:-5px;
-        li{
+        top: -5px;
+        li {
           display: inline-flex;
-          white-space:nowrap;
-          overflow:hidden;
-          padding:0 2em;
-          border-right: 1px solid rgba(255,255,255,0.2);
+          white-space: nowrap;
+          overflow: hidden;
+          padding: 0 2em;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
           font-size: 15px;
-          &:hover{
+          &:hover {
             background: @maincolor;
           }
         }
-        li:last-child{
+        li:last-child {
           border-right: none;
         }
       }
-      
     }
   }
 }
 
-.mobile_nav{
+.mobile_nav {
   display: none;
-  height:2.5em;
+  height: 2.5em;
   background: @maincolor;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  .logo{
+  .logo {
     position: fixed;
-    padding:.5em;
-    img{
-      height:1.5em;
+    padding: .5em;
+    img {
+      height: 1.5em;
     }
   }
-  .navbtn{
+  .navbtn {
     position: fixed;
-    right:.5em;
-    top:.6em;
+    right: .5em;
+    top: .6em;
     cursor: pointer;
-    img{
-      width:1.25em;
+    img {
+      width: 1.25em;
       opacity: 0.8;
     }
   }
-  .mobile_content{
+  .mobile_content {
     overflow-y: auto;
     overflow-x: auto;
     position: relative;
     animation: flyin ease .5s;
-    height:100vh;
-    width:220px;
+    height: 100vh;
+    width: 220px;
     background: @maincolor;
-    color:#fff;
+    color: #fff;
     line-height: 45px;
     text-align: center;
-    .mainnav{
+    .mainnav {
       background: @maincolor;
-      border-bottom:1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       cursor: pointer;
-      .arrow{
+      .arrow {
         display: none;
       }
     }
-    .isSub{
+    .isSub {
       position: relative;
-      .arrow{
+      .arrow {
         display: block;
         position: absolute;
-        top:10px;
-        right:5px;
-        width:20px;
+        top: 10px;
+        right: 5px;
+        width: 20px;
       }
-      .sub_nav{
+      .sub_nav {
         background: @subcolor;
         display: none;
         font-size: 0.9em;
         animation: flyin ease .5s;
       }
-      .sub_nav_item{
+      .sub_nav_item {
         background: @subcolor;
-        border-top:1px solid rgba(255,255,255,0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
       }
     }
-    .wrap{
+    .wrap {
       position: fixed;
-      top:0;
-      left:0;
-      height:100vh;
-      width:100vw;
-      background: rgba(255,255,255,0.3);
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(255, 255, 255, 0.3);
       z-index: -1;
     }
   }
 }
 
-@keyframes flyin{
-  from{right:100%;}
-  to{right:0;}
+@keyframes flyin {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
 }
 
-.inview{
-  padding-top:3rem;
+.inview {
+  padding-top: 3rem;
 }
-@media screen and (max-width:900px){
-  .topnav{
+
+@media screen and (max-width:900px) {
+  .topnav {
     display: none;
-    *{
+    * {
       display: none;
     }
   }
-  .mobile_nav{
-    display:block;
+  .mobile_nav {
+    display: block;
   }
-  .inview{
-    padding-top:2rem;
+  .inview {
+    padding-top: 2rem;
   }
 }
 </style>
