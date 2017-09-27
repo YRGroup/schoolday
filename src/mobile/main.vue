@@ -100,12 +100,12 @@
       <div class="card">
         <p class="title">校长介绍</p>
         <div class="flex">
-          <div class="item" v-for="(i,index) in $store.state.xiaozhangInfo" @click="(showMore===index)?showMore=null:showMore=index">
+          <div class="item" v-for="(i,index) in $store.state.xiaozhangInfo" @click="showXiaozhangMore(index)">
             <img :src="i.face" alt="育人国际学校校长 贾莉">
             <p class="itemTitle">{{ i.name }}</p>
             <p class="subTitle">{{ i.job }}
             <br>{{ i.old_job }}</p>
-            <div class="more" v-show="showMore===index">
+            <div class="more" v-show="showMore===index" :id="'xiaozhangMore'+index">
               <p v-for="p in i.info">{{p}}</p>
             </div>
           </div>
@@ -215,6 +215,13 @@ export default {
       this.xiaozhang_popup_data = this.$store.state.xiaozhangInfo[val]
       this.show_xiaozhang_popup = true
     },
+    showXiaozhangMore(index){
+      if(this.showMore!=index){
+        this.showMore=index
+      }else{
+        this.showMore=null
+      }
+    }
   },
   created() {
     if (window.innerWidth >= 900) {
