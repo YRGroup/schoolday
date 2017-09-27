@@ -40,6 +40,11 @@ export default new Router({
       component: s
     },
     {
+      path: '/seven/:school',
+      name: 'seven',
+      component: seven
+    },
+    {
       path: '/sd/:name',
       name: 'SD',
       component: SD

@@ -74,27 +74,27 @@ export default {
           sub:[
             { 
               title:'郑州航空港区育人国际学校',
-              link:'/f/gj'
+              link:'/s/gjxx'
             },
             {
               title:'郑州外国语女子中学',
-              link:'/f/nz'
+              link:'/s/nzzx'
             },
             {
               title:'郑州航空港区育人高级中学',
-              link:'/f/nn'
+              link:'/s/gjzx'
             },
             {
               title:'襄城育人国际学校',
-              link:'/f/xc'
+              link:'/s/xcyr'
             },
             {
               title:'e-Baby台湾精致早教',
-              link:'/f/bb'
+              link:'/s/baby'
             },
             {
               title:'爱因斯坦国际幼儿园',
-              link:'/f/ay'
+              link:'/s/ayst'
             }
           ]
         },
@@ -136,24 +136,24 @@ export default {
         // },
         {
           title:'全景学校',
-          link:'/s/gj',
+          link:'/seven/gj',
           isSub:true,
           sub:[
             { 
               title:'郑州航空港区育人国际学校',
-              link:'/s/gj'
+              link:'/seven/gj'
             },
             {
               title:'郑州外国语女子中学',
-              link:'/s/nz'
+              link:'/seven/nz'
             },
             {
               title:'郑州航空港区育人高级中学',
-              link:'/s/nn'
+              link:'/seven/nn'
             },
             {
               title:'襄城育人国际学校',
-              link:'/s/bb'
+              link:'/seven/bb'
             }
           ]
         }
