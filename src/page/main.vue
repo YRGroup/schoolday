@@ -83,7 +83,7 @@
       <div class="swipe" v-show="swipeIndex==index" v-for="(i,index) in youku" :key="index">
         <div class="video">
           <!-- <iframe width="854px" :src='i.video' frameborder=0></iframe> -->
-          <video :src="i.src" class="videoContent playBtn" @click="handlePlay($event.currentTarget)" :poster="playBtn"></video>
+          <video :src="i.src" ref="yVideo" class="videoContent playBtn" @click="handlePlay($event.currentTarget)" :poster="playBtn"></video>
         </div>
         </br>
         <p class="title">{{i.title}}</p>
@@ -227,7 +227,7 @@ export default {
       },
       show_xiaozhang_popup: false,
       swipeIndex: 0,
-      playBtn:require('@/assets/playBtn.png')
+      playBtn: require('@/assets/playBtn.png')
     }
   },
   methods: {
@@ -239,9 +239,9 @@ export default {
       this.show_xiaozhang_popup = true
     },
     handlePlay(el) {
-      if(el.paused){
+      if (el.paused) {
         el.play()
-      }else{
+      } else {
         el.pause()
 
       }
@@ -250,6 +250,11 @@ export default {
   created() {
     if (window.innerWidth < 900) {
       this.$router.push('/m')
+    }
+  },
+  watch: {
+    "swipeIndex": function(val) {
+      this.$refs.yVideo[val].pause()
     }
   }
 }
@@ -298,10 +303,10 @@ export default {
     .flex {
       display: flex;
       flex-wrap: wrap;
-      justify-content:center;
-      .item{
-        width:250px;
-        padding:2rem;
+      justify-content: center;
+      .item {
+        width: 250px;
+        padding: 2rem;
       }
     }
   }
@@ -369,9 +374,9 @@ export default {
   background-color: transparent;
   background-position: center center;
   background-image: url('http://o0m4okv24.qnssl.com/static/backgrounds/striking-pack-2/28.jpg');
-  .subTitle{
-  font-size: 15px;
-}
+  .subTitle {
+    font-size: 15px;
+  }
 }
 
 .xiaozhang_popup {
@@ -393,7 +398,7 @@ export default {
   .container {
     z-index: 110;
     position: absolute;
-    bottom: 15%;
+    top: 20%;
     left: 15%;
     right: 15%;
     min-height: 200px;
