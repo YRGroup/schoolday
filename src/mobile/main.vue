@@ -155,7 +155,7 @@ export default {
           title: '郑州外国语女子中学',
           subTitle: '优秀优雅，秀外慧中',
           link: 'http://www.zznz.org/',
-          video: 'http://player.youku.com/embed/XMTY1NzYxODE2MA=='
+          video: 'http://novembergaran.oss-cn-beijing.aliyuncs.com/02%E4%BD%A0%E5%9C%A8%E7%9E%8E%E5%BF%99%E4%BB%80%E4%B9%88%5B%E8%82%B2%E4%BA%BA%E6%95%99%E8%82%B2%E9%9B%86%E5%9B%A2%E5%8A%B1%E5%BF%97%E5%AE%A3%E4%BC%A0%E7%89%87%5D_batch.mp4?Expires=1506495843&OSSAccessKeyId=TMP.AQGT199zeBsxG74Rotgd6HBMNm1s7ExahQsyztxHoDtdQjjOVu5bFivz3v2EADAtAhUAuXgDWQfC8wF8P9MEEKmS3pJU-RoCFDWbZFEJg5Jr9xGNvyCS_k9znXiO&Signature=j01zv8k3SbrLA2dtvFB8gRvvy%2FU%3D'
         },
         {
           title: '郑州航空港区育人高级中学',

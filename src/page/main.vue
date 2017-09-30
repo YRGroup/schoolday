@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <div class="main">
-      <img src="//nzr2ybsda.qnssl.com/images/33905/FsUANh0Ru67Yxv_oKDYutfYWdJ67.png?imageMogr2/strip/thumbnail/1200x9000>/quality/90!/format/png">
+      <img src="../assets/FsUANh0Ru67Yxv_oKDYutfYWdJ67.png">
     </div>
     <div class="section section1">
       <div class="card">
@@ -263,7 +263,7 @@ export default {
       flex-wrap: wrap;
       justify-content:center;
       .item{
-        width:300px;
+        width:250px;
         padding:2rem;
       }
     }
@@ -322,6 +322,9 @@ export default {
   background-color: transparent;
   background-position: center center;
   background-image: url('http://o0m4okv24.qnssl.com/static/backgrounds/striking-pack-2/28.jpg');
+  .subTitle{
+  font-size: 15px;
+}
 }
 .xiaozhang_popup{
   position: fixed;
