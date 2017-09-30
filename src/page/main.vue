@@ -253,8 +253,11 @@ export default {
     }
   },
   watch: {
-    "swipeIndex": function(val) {
-      this.$refs.yVideo[val].pause()
+    "swipeIndex": function(n,o) {
+      this.$refs.yVideo[o].pause()
+      if(this.$refs.yVideo[n].currentTime!==0){
+        this.$refs.yVideo[n].play()
+      }
     }
   }
 }
